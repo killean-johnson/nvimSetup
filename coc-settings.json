@@ -1,0 +1,51 @@
+{
+  "prettier.tabWidth": 4,
+  "eslint.filetypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "svelte"
+  ],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "svelte",
+    "yaml"
+  ],
+  "tsserver.formatOnType": false,
+  "coc.preferences.formatOnType": false,
+  "snippets.ultisnips.directories": [ "$HOME/.config/nvim/plugged" ],
+  "snippets.extends": {
+    "typescriptreact": [ "javascript" ]
+  },
+  "tailwindCSS.htmlLanguages": [
+    "blade",
+    "edge",
+    "eelixir",
+    "ejs",
+    "elixir",
+    "elm",
+    "erb",
+    "eruby",
+    "haml",
+    "handlebars",
+    "html",
+    "HTML (EEx)",
+    "HTML (Eex)",
+    "html.twig",
+    "jade",
+    "leaf",
+    "markdown",
+    "njk",
+    "nunjucks",
+    "php",
+    "razor",
+    "slim",
+    "svelte",
+    "twig",
+    "vue"
+  ]
+}
