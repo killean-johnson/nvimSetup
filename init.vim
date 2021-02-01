@@ -3,7 +3,7 @@ call plug#begin()
 Plug 'sheerun/vim-polyglot'
 
 " Color themes
-lug 'jaredgorski/spacecamp'
+Plug 'jaredgorski/spacecamp'
 Plug 'mhartington/oceanic-next'
 Plug 'joshdick/onedark.vim'
 Plug 'humanoid-colors/vim-humanoid-colorscheme'
