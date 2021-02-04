@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/killeanj/VOEProjects/voe-frontend/src/Pages/LevelRun'
+let g:netrw_dirhist_3='/home/killeanj/VOEProjects/voe-frontend/src/Pages'
+let g:netrw_dirhist_2='/home/killeanj/VOEProjects/voe-frontend/src/Pages/Riser'
+let g:netrw_dirhist_1='/home/killeanj/VOEProjects/voe-frontend/src/Global/Constants'

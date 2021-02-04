@@ -46,11 +46,22 @@ Plug 'miyakogi/conoline.vim'
 " fast moving
 Plug 'justinmk/vim-sneak'
 
-Plug 'git@github.com:prettier/vim-prettier'
-Plug 'git@github.com:francoiscabrol/ranger.vim'
+" post install (yarn install | npm install) then load plugin only for editing supported files
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+
+Plug 'francoiscabrol/ranger.vim'
 call plug#end()
 
 " general mappings
 source $HOME/.config/nvim/config/general.vimrc
 " mapping specific to coc
 source $HOME/.config/nvim/config/coc.vimrc
+
+" WSL yank support
+let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
+if executable(s:clip)
+    augroup WSLYank
+        autocmd!
+        autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+    augroup END
+endif
