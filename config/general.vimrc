@@ -24,6 +24,8 @@ let mapleader = ","
 "Clear search highlighting
 nnoremap <leader><space> :nohlsearch<cr>
 
+" Toggle relative numbering
+nnoremap <leader>sn :set rnu!<cr>
 "highlight where line where cursor is
 set cursorline
 
