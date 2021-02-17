@@ -49,7 +49,11 @@ Plug 'justinmk/vim-sneak'
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
+" File explorer
 Plug 'francoiscabrol/ranger.vim'
+
+" Debugger
+Plug 'puremourning/vimspector'
 call plug#end()
 
 " general mappings
