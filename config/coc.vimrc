@@ -23,7 +23,6 @@ nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
 nmap <leader>do <Plug>(coc-codeaction)
 nmap <leader>rn <Plug>(coc-rename)
 nnoremap <leader>dp :Prettier<CR>
-nnoremap <leader>rr :Ranger<CR>
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
