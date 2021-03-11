@@ -1,11 +1,12 @@
 let g:coc_global_extensions = [
-  \ 'coc-tsserver',
-  \ 'coc-prettier',
   \ 'coc-eslint',
+  \ 'coc-omnisharp',
   \ 'coc-phpls',
+  \ 'coc-prettier',
   \ 'coc-snippets',
   \ 'coc-svelte',
   \ 'coc-tailwindcss',
+  \ 'coc-tsserver',
   \ 'coc-xml',
   \ ]
 
@@ -23,6 +24,9 @@ nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
 nmap <leader>do <Plug>(coc-codeaction)
 nmap <leader>rn <Plug>(coc-rename)
 nnoremap <leader>dp :Prettier<CR>
+
+nnoremap <leader>n :cn<CR>
+nnoremap <leader>N :cN<CR>
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 

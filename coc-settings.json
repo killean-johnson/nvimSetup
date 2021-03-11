@@ -15,6 +15,9 @@
     "svelte",
     "yaml"
   ],
+  "omnisharp.version":"v1.37.3",
+  "omnisharp.trace.server": "information",
+  "omnisharp.debug.server": true,
   "tsserver.formatOnType": false,
   "coc.preferences.formatOnType": false,
   "snippets.ultisnips.directories": [ "$HOME/.config/nvim/plugged" ],

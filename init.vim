@@ -12,6 +12,9 @@ Plug 'ayu-theme/ayu-vim'
 " coc for language servers
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" .net tools
+Plug 'OmniSharp/omnisharp-vim'
+
 " auto closing of brackets etc.
 Plug 'yuttie/comfortable-motion.vim'
 
@@ -69,3 +72,5 @@ if executable(s:clip)
         autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
     augroup END
 endif
+
+set tags=./tags,tags;$HOME
