@@ -15,6 +15,12 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " .net tools
 Plug 'OmniSharp/omnisharp-vim'
 
+" vbnet tools
+Plug 'vim-scripts/vbnet.vim'
+
+" diff tools
+Plug 'will133/vim-dirdiff'
+
 " auto closing of brackets etc.
 Plug 'yuttie/comfortable-motion.vim'
 

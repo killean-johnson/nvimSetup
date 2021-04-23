@@ -28,6 +28,9 @@ nnoremap <leader>dp :Prettier<CR>
 nnoremap <leader>n :cn<CR>
 nnoremap <leader>N :cN<CR>
 
+nnoremap <leader>dn :DirDiffNext<CR>
+nnoremap <leader>dN :DirDiffPrev<CR>
+
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " tab auto complete
