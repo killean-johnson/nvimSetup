@@ -15,6 +15,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " .net tools
 Plug 'OmniSharp/omnisharp-vim'
 
+" Better quickfix
+Plug 'kevinhwang91/nvim-bqf'
+
 " vbnet tools
 Plug 'vim-scripts/vbnet.vim'
 
