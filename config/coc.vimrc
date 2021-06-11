@@ -31,6 +31,17 @@ nnoremap <leader>N :cN<CR>
 nnoremap <leader>dn :DirDiffNext<CR>
 nnoremap <leader>dN :DirDiffPrev<CR>
 
+nnoremap <leader>gor :GoRun<CR>
+nnoremap <leader>got :GoTest<CR>
+
+" Breakpoint, step in, step over, step out, and continue
+nnoremap <leader>godb :GoDebugStart<CR>
+nnoremap <leader>gob :GoDebugBreakpoint<CR>
+nnoremap <leader>goh :GoDebugStep<CR>
+nnoremap <leader>goj :GoDebugNext<CR>
+nnoremap <leader>gok :GoDebugStepOut<CR>
+nnoremap <leader>gol :GoDebugContinue<CR>
+
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " tab auto complete
@@ -77,9 +88,3 @@ function! s:check_back_space() abort
 endfunction
 
 let g:coc_snippet_next = '<tab>'
-
-
-
-
-
-

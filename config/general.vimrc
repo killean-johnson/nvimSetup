@@ -10,9 +10,9 @@ set nocompatible
 " Theme
 syntax enable
 syntax on
-"colorscheme onedark
-let ayucolor = "dark"
-colorscheme ayu
+colorscheme onedark
+"let ayucolor = "dark"
+"colorscheme ayu
 "colorscheme humanoid
 "colorscheme OceanicNext
 filetype plugin on

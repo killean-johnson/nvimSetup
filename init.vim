@@ -12,8 +12,8 @@ Plug 'ayu-theme/ayu-vim'
 " coc for language servers
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" .net tools
-Plug 'OmniSharp/omnisharp-vim'
+" go tools
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Better quickfix
 Plug 'kevinhwang91/nvim-bqf'
@@ -24,11 +24,12 @@ Plug 'vim-scripts/vbnet.vim'
 " diff tools
 Plug 'will133/vim-dirdiff'
 
-" auto closing of brackets etc.
-Plug 'yuttie/comfortable-motion.vim'
+" jira plugin
+Plug 'n0v1c3/vira', { 'do': './install.sh' }
 
-" smooth scrolling through files
-Plug 'yuttie/comfortable-motion.vim'
+" Smooth scrolling plugins (Only use one at a time)
+"Plug 'yuttie/comfortable-motion.vim'
+Plug 'psliwka/vim-smoothie'
 
 " close tags for jsx, html
 Plug 'alvan/vim-closetag'
@@ -49,6 +50,9 @@ Plug 'tpope/vim-surround'
 " commenting plugin
 Plug 'tpope/vim-commentary'
 
+" Folding plugin
+Plug 'pseewald/vim-anyfold'
+
 " never forget keybindings
 Plug 'liuchengxu/vim-which-key'
 
@@ -65,13 +69,27 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'francoiscabrol/ranger.vim'
 
 " Debugger
-Plug 'puremourning/vimspector'
+"Plug 'puremourning/vimspector'
 call plug#end()
 
 " general mappings
 source $HOME/.config/nvim/config/general.vimrc
 " mapping specific to coc
 source $HOME/.config/nvim/config/coc.vimrc
+
+" Auto set syntax highlighting and folding to vbnet for vb files
+"autocmd BufNewFile,BufRead *.vb set ft=vbnet
+
+" Set up folding plugin
+filetype plugin indent on
+syntax on
+autocmd BufNewFile,BufRead *.vb AnyFoldActivate
+set foldlevel=99
+hi Folded term=underline
+
+" Reinstall highlight if you want this
+"autocmd CursorHold * silent call CocActionAsync('highlight')
+"hi CocHighlightText term=underline gui=underline
 
 " WSL yank support
 let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
