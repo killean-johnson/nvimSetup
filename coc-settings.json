@@ -50,5 +50,28 @@
     "svelte",
     "twig",
     "vue"
-  ]
+  ],
+  "languageserver": {
+    "golang": {
+        "command": "~/go/bin/gopls",
+        "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+        "filetypes": ["go"],
+        "initializationOptions": {
+            "usePlaceholders": true
+        }
+    },
+    "vblsp": {
+        "module": "/mnt/c/Users/Killean Johnson/Documents/Projects/vb-lsp/server/out/server.js",
+        "args": ["--node-ipc"],
+        "execArgv": ["--nolazy", "--inspect=6009"],
+        "filetypes": ["vbnet"],
+        "trace.server": "verbose",
+        "initializationOptions": {
+
+        },
+        "settings": {
+            "validate": true
+        }
+    }
+  }
 }
