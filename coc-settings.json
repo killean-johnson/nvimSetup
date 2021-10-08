@@ -1,77 +1,97 @@
 {
-  "prettier.tabWidth": 4,
-  "eslint.filetypes": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "svelte"
-  ],
-  "coc.preferences.formatOnSaveFiletypes": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "svelte",
-    "yaml"
-  ],
-  "omnisharp.version":"v1.37.3",
-  "omnisharp.trace.server": "information",
-  "omnisharp.debug.server": true,
-  "tsserver.formatOnType": false,
-  "coc.preferences.formatOnType": false,
-  "snippets.ultisnips.directories": [ "$HOME/.config/nvim/plugged" ],
-  "snippets.extends": {
-    "typescriptreact": [ "javascript" ]
-  },
-  "tailwindCSS.htmlLanguages": [
-    "blade",
-    "edge",
-    "eelixir",
-    "ejs",
-    "elixir",
-    "elm",
-    "erb",
-    "eruby",
-    "haml",
-    "handlebars",
-    "html",
-    "HTML (EEx)",
-    "HTML (Eex)",
-    "html.twig",
-    "jade",
-    "leaf",
-    "markdown",
-    "njk",
-    "nunjucks",
-    "php",
-    "razor",
-    "slim",
-    "svelte",
-    "twig",
-    "vue"
-  ],
-  "languageserver": {
-    "golang": {
-        "command": "~/go/bin/gopls",
-        "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-        "filetypes": ["go"],
-        "initializationOptions": {
-            "usePlaceholders": true
-        }
+    "prettier.tabWidth": 4,
+    "eslint.filetypes": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "svelte"
+    ],
+    "coc.preferences.formatOnSaveFiletypes": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "py",
+        "yaml",
+        "json",
+        "svelte",
+        "yaml"
+    ],
+    "python.linting.flake8Enabled": true,
+    "python.formatting.provider": "black",
+    "python.pythonPath": "/bin/python3",
+    "omnisharp.version": "v1.37.3",
+    "omnisharp.trace.server": "information",
+    "omnisharp.debug.server": true,
+    "tsserver.formatOnType": false,
+    "coc.preferences.formatOnType": false,
+    "snippets.ultisnips.directories": ["$HOME/.config/nvim/plugged"],
+    "snippets.extends": {
+        "typescriptreact": ["javascript"]
     },
-    "vblsp": {
-        "module": "/mnt/c/Users/Killean Johnson/Documents/Projects/vb-lsp/server/out/server.js",
-        "args": ["--node-ipc"],
-        "execArgv": ["--nolazy", "--inspect=6009"],
-        "filetypes": ["vbnet"],
-        "trace.server": "verbose",
-        "initializationOptions": {
-
+    "tailwindCSS.htmlLanguages": [
+        "blade",
+        "edge",
+        "eelixir",
+        "ejs",
+        "elixir",
+        "elm",
+        "erb",
+        "eruby",
+        "haml",
+        "handlebars",
+        "html",
+        "HTML (EEx)",
+        "HTML (Eex)",
+        "html.twig",
+        "jade",
+        "leaf",
+        "markdown",
+        "njk",
+        "nunjucks",
+        "php",
+        "razor",
+        "slim",
+        "svelte",
+        "twig",
+        "vue"
+    ],
+    "languageserver": {
+        "golang": {
+            "command": "~/go/bin/gopls",
+            "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+            "filetypes": ["go"],
+            "initializationOptions": {
+                "usePlaceholders": true
+            }
         },
-        "settings": {
-            "validate": true
+        "vblsp": {
+            "module": "/mnt/c/Users/killean.johnson/Documents/Projects/vb-lsp/server/out/server.js",
+            "args": ["--node-ipc"],
+            "execArgv": ["--nolazy", "--inspect=6009"],
+            "filetypes": ["vbnet"],
+            "trace.server": "verbose",
+            "initializationOptions": {},
+            "settings": {
+                "validate": true
+            }
+        },
+        "ccls": {
+            "command": "ccls",
+            "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
+            "rootPatterns": [
+                ".ccls",
+                "compile_commands.json",
+                ".vim/",
+                ".git/",
+                ".hg/"
+            ],
+            "initializationOptions": {
+                "cache": {
+                    "directory": "/tmp/ccls"
+                }
+            }
         }
     }
-  }
 }
