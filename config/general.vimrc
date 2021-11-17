@@ -97,7 +97,7 @@ nnoremap <Leader>wp :call vimwiki#base#goto_index(v:count, 3)<cr>
 nnoremap <silent> <leader> :WhichKey ','<CR>
 set timeoutlen=500
 
-" Lazygit keybinding
+" Lazygit keybinding and settings
 nnoremap <silent> <leader>lg :LazyGit<CR>
 
 " vim sneak
