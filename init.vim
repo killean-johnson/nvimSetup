@@ -8,6 +8,12 @@ Plug 'mhartington/oceanic-next'
 Plug 'joshdick/onedark.vim'
 Plug 'humanoid-colors/vim-humanoid-colorscheme'
 Plug 'ayu-theme/ayu-vim'
+Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
+Plug 'rose-pine/neovim'
+Plug 'morhetz/gruvbox'
+
+" Lazygit plugin
+Plug 'kdheepak/lazygit.nvim'
 
 " coc for language servers
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -74,7 +80,11 @@ Plug 'justinmk/vim-sneak'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 " File explorer
-Plug 'francoiscabrol/ranger.vim'
+"Plug 'francoiscabrol/ranger.vim'
+
+" Another file explorer
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'kyazdani42/nvim-tree.lua'
 
 " Debugger
 Plug 'puremourning/vimspector'
@@ -84,6 +94,8 @@ call plug#end()
 source $HOME/.config/nvim/config/general.vimrc
 " mapping specific to coc
 source $HOME/.config/nvim/config/coc.vimrc
+" Lua crap mappings
+source $HOME/.config/nvim/config/lua.vimrc
 
 " Auto set syntax highlighting and folding to vbnet for vb files
 "autocmd BufNewFile,BufRead *.vb set ft=vbnet

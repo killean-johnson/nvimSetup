@@ -10,13 +10,29 @@ set nocompatible
 " Theme
 syntax enable
 syntax on
-colorscheme onedark
+"colorscheme onenord
+"colorscheme onedark
+
 "let ayucolor = "dark"
 "colorscheme ayu
+
 "colorscheme humanoid
+
+let g:gruvbox_contrast_light='medium'
+set bg=dark
+colorscheme gruvbox
+
+" lua << EOF
+"     vim.g.rose_pine_variant='moon'
+"     vim.g.rose_pine_disable_background = false
+" EOF
+" colorscheme rose-pine
+
 "colorscheme OceanicNext
+
 filetype plugin on
 set number
+
 
 "leader remap
 let mapleader = ","
@@ -80,6 +96,9 @@ nnoremap <Leader>wp :call vimwiki#base#goto_index(v:count, 3)<cr>
 " vim which key setup
 nnoremap <silent> <leader> :WhichKey ','<CR>
 set timeoutlen=500
+
+" Lazygit keybinding
+nnoremap <silent> <leader>lg :LazyGit<CR>
 
 " vim sneak
 let g:sneak#label = 1
