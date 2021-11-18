@@ -10,29 +10,25 @@ set nocompatible
 " Theme
 syntax enable
 syntax on
+
 "colorscheme onenord
 "colorscheme onedark
-
 "let ayucolor = "dark"
 "colorscheme ayu
-
 "colorscheme humanoid
-
-let g:gruvbox_contrast_light='medium'
-set bg=dark
-colorscheme gruvbox
-
 " lua << EOF
 "     vim.g.rose_pine_variant='moon'
 "     vim.g.rose_pine_disable_background = false
 " EOF
 " colorscheme rose-pine
-
 "colorscheme OceanicNext
+
+let g:gruvbox_contrast_light='medium'
+set bg=dark
+colorscheme gruvbox
 
 filetype plugin on
 set number
-
 
 "leader remap
 let mapleader = ","
@@ -42,6 +38,7 @@ nnoremap <leader><space> :nohlsearch<cr>
 
 " Toggle relative numbering
 nnoremap <leader>sn :set rnu!<cr>
+
 "highlight where line where cursor is
 set cursorline
 
@@ -80,10 +77,6 @@ nnoremap <Leader>p :Rg<CR>
 "Ranger command remap
 let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
 
-"VimWiki
-let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
-nnoremap <Leader>wp :call vimwiki#base#goto_index(v:count, 3)<cr>
-
 "WSL yank support
 " let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
 " if executable(s:clip)
@@ -100,10 +93,36 @@ set timeoutlen=500
 " Lazygit keybinding and settings
 nnoremap <silent> <leader>lg :LazyGit<CR>
 
-" vim sneak
-let g:sneak#label = 1
-
-nnoremap <leader>gs :G<CR>
-nnoremap <leader>gd : Gvdiff<CR>
-nnoremap <leader>gf :diffget //2<CR>
-nnoremap <leader>gj :diffget //3<CR>
+" puremourning/vimspector
+fun! GotoWindow(id)
+    :call win_gotoid(a:id)
+endfun
+func! AddToWatch()
+    let word = expand("<cexpr>")
+    call vimspector#AddWatch(word)
+endfunction
+let g:vimspector_base_dir = expand('$HOME/.config/nvim')
+let g:vimspector_sidebar_width = 60
+nnoremap <leader>va :call vimspector#Launch()<CR>
+nnoremap <leader>vc :call GotoWindow(g:vimspector_session_windows.code)<CR>
+nnoremap <leader>vv :call GotoWindow(g:vimspector_session_windows.variables)<CR>
+nnoremap <leader>vw :call GotoWindow(g:vimspector_session_windows.watches)<CR>
+nnoremap <leader>vs :call GotoWindow(g:vimspector_session_windows.stack_trace)<CR>
+nnoremap <leader>vo :call GotoWindow(g:vimspector_session_windows.output)<CR>
+nnoremap <leader>vi :call AddToWatch()<CR>
+nnoremap <leader>vx :call vimspector#Reset()<CR>
+nnoremap <leader>vX :call vimspector#ClearBreakpoints()<CR>
+nnoremap <leader>si :call vimspector#StepInto()<CR>
+nnoremap <leader>so :call vimspector#StepOver()<CR>
+nnoremap <leader>sO :call vimspector#StepOut()<CR>
+nnoremap <leader>v_ :call vimspector#Restart()<CR>
+nnoremap <leader>vn :call vimspector#Continue()<CR>
+nnoremap <leader>vrc :call vimspector#RunToCursor()<CR>
+nnoremap <leader>vh :call vimspector#ToggleBreakpoint()<CR>
+nnoremap <leader>ve :call vimspector#ToggleConditionalBreakpoint()<CR>
+let g:vimspector_sign_priority = {
+    \    'vimspectorBP':         998,
+    \    'vimspectorBPCond':     997,
+    \    'vimspectorBPDisabled': 996,
+    \    'vimspectorPC':         999,
+\ }

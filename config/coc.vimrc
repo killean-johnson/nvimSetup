@@ -28,9 +28,7 @@ nnoremap <leader>dp :Prettier<CR>
 nnoremap <leader>n :cn<CR>
 nnoremap <leader>N :cN<CR>
 
-nnoremap <leader>dn :DirDiffNext<CR>
-nnoremap <leader>dN :DirDiffPrev<CR>
-
+" Go Bindings
 nnoremap <leader>gor :GoRun<CR>
 nnoremap <leader>got :GoTest<CR>
 
