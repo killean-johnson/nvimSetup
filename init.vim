@@ -1,6 +1,7 @@
 call plug#begin()
 " Syntax highlighting
-Plug 'sheerun/vim-polyglot'
+"Plug 'sheerun/vim-polyglot'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Color themes
 " Plug 'jaredgorski/spacecamp'
@@ -10,7 +11,8 @@ Plug 'sheerun/vim-polyglot'
 " Plug 'ayu-theme/ayu-vim'
 " Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
 " Plug 'rose-pine/neovim'
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
+Plug 'sainnhe/everforest'
 
 " Lazygit plugin
 Plug 'kdheepak/lazygit.nvim'
@@ -19,7 +21,8 @@ Plug 'kdheepak/lazygit.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " go tools
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'darrikonn/vim-gofmt'
+"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Better quickfix
 Plug 'kevinhwang91/nvim-bqf'
@@ -32,6 +35,9 @@ Plug 'psliwka/vim-smoothie'
 
 " close tags for jsx, html
 Plug 'alvan/vim-closetag'
+
+" Toggle term plugin
+Plug 'akinsho/toggleterm.nvim'
 
 " status bar plug
 Plug 'vim-airline/vim-airline'
@@ -76,6 +82,8 @@ source $HOME/.config/nvim/config/general.vimrc
 source $HOME/.config/nvim/config/coc.vimrc
 " Lua crap mappings
 source $HOME/.config/nvim/config/lua.vimrc
+" Syntax highlighting
+source $HOME/.config/nvim/config/tree-sitter-config.vimrc
 
 " Set up folding plugin
 filetype plugin indent on

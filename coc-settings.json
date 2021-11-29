@@ -21,9 +21,6 @@
     "python.linting.flake8Enabled": true,
     "python.formatting.provider": "black",
     "python.pythonPath": "/bin/python3",
-    "omnisharp.version": "v1.37.3",
-    "omnisharp.trace.server": "information",
-    "omnisharp.debug.server": true,
     "tsserver.formatOnType": false,
     "coc.preferences.formatOnType": false,
     "snippets.ultisnips.directories": ["$HOME/.config/nvim/plugged"],
@@ -57,15 +54,8 @@
         "twig",
         "vue"
     ],
+    "go.goplsOptions": {},
     "languageserver": {
-        "golang": {
-            "command": "~/go/bin/gopls",
-            "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-            "filetypes": ["go"],
-            "initializationOptions": {
-                "usePlaceholders": true
-            }
-        },
         "vblsp": {
             "module": "/mnt/c/Users/killean.johnson/Documents/Projects/vb-lsp/server/out/server.js",
             "args": ["--node-ipc"],

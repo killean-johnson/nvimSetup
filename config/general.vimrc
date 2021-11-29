@@ -17,15 +17,20 @@ syntax on
 "colorscheme ayu
 "colorscheme humanoid
 " lua << EOF
-"     vim.g.rose_pine_variant='moon'
+"     -- vim.g.rose_pine_variant='moon'
 "     vim.g.rose_pine_disable_background = false
 " EOF
 " colorscheme rose-pine
 "colorscheme OceanicNext
 
-let g:gruvbox_contrast_light='medium'
-set bg=dark
-colorscheme gruvbox
+set background=dark
+let g:everforest_background = 'hard'
+let g:airline_theme = 'everforest'
+colorscheme everforest
+
+" let g:gruvbox_contrast_light='medium'
+" set bg=dark
+" colorscheme gruvbox
 
 filetype plugin on
 set number
@@ -120,9 +125,22 @@ nnoremap <leader>vn :call vimspector#Continue()<CR>
 nnoremap <leader>vrc :call vimspector#RunToCursor()<CR>
 nnoremap <leader>vh :call vimspector#ToggleBreakpoint()<CR>
 nnoremap <leader>ve :call vimspector#ToggleConditionalBreakpoint()<CR>
+nnoremap <leader>vb <Plug>VimspectorBalloonEval <CR>
+nmap <leader>vb <Plug>VimspectorBalloonEval <CR>
 let g:vimspector_sign_priority = {
     \    'vimspectorBP':         998,
     \    'vimspectorBPCond':     997,
     \    'vimspectorBPDisabled': 996,
     \    'vimspectorPC':         999,
 \ }
+
+lua << EOF
+    local Terminal  = require('toggleterm.terminal').Terminal
+    local jiratui = Terminal:new({ cmd = "jira-tui", direction = 'float', hidden = true })
+
+    function _jiratui_toggle()
+      jiratui:toggle()
+    end
+
+    vim.api.nvim_set_keymap("n", "<leader>jt", "<cmd>lua _jiratui_toggle()<CR>", {noremap = true, silent = true})
+EOF

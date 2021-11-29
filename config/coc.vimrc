@@ -1,6 +1,5 @@
 let g:coc_global_extensions = [
   \ 'coc-eslint',
-  \ 'coc-omnisharp',
   \ 'coc-phpls',
   \ 'coc-prettier',
   \ 'coc-snippets',
@@ -41,6 +40,7 @@ nnoremap <leader>gok :GoDebugStepOut<CR>
 nnoremap <leader>gol :GoDebugContinue<CR>
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
 
 " tab auto complete
 inoremap <silent><expr> <TAB>
