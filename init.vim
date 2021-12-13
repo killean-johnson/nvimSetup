@@ -60,7 +60,7 @@ Plug 'tpope/vim-commentary'
 Plug 'pseewald/vim-anyfold'
 
 " never forget keybindings
-Plug 'liuchengxu/vim-which-key'
+Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
 " highlighting current line
 Plug 'miyakogi/conoline.vim'

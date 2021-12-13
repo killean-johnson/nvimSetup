@@ -20,7 +20,7 @@ nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
 
-nmap <leader>do <Plug>(coc-codeaction)
+nmap <leader>ga <Plug>(coc-codeaction)
 nmap <leader>rn <Plug>(coc-rename)
 nnoremap <leader>dp :Prettier<CR>
 

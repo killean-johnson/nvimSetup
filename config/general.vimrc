@@ -73,11 +73,10 @@ autocmd FileType netrw setl bufhidden=delete
 let g:netrw_fastbrowse = 0
 let g:netrw_liststyle = 3
 
-
 "FZF shortcut
 let $FZF_DEFAULT_COMMAND = 'rg --files --follow --no-ignore-vcs --hidden -g "!{node_modules/*,.git/*,vendor/*}"'
-nnoremap <c-p> :Files<CR>
-nnoremap <Leader>p :Rg<CR>
+nnoremap <Leader>fp :Files<CR>
+nnoremap <Leader>fs :Rg<CR>
 
 "Ranger command remap
 let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
