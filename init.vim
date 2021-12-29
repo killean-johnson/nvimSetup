@@ -27,9 +27,6 @@ Plug 'darrikonn/vim-gofmt'
 " Better quickfix
 Plug 'kevinhwang91/nvim-bqf'
 
-" vbnet tools
-Plug 'vim-scripts/vbnet.vim'
-
 " Smooth scrolling plugins (Only use one at a time)
 Plug 'psliwka/vim-smoothie'
 

@@ -1,2 +1,4 @@
 plugged
 gadgets
+
+autoload/plug.vim

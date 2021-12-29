@@ -90,6 +90,9 @@ let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
 "     augroup END
 " endif
 
+" Yank support for OSX
+set clipboard=unnamed
+
 " vim which key setup
 nnoremap <silent> <leader> :WhichKey ','<CR>
 set timeoutlen=500
